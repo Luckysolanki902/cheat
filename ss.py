@@ -3,27 +3,17 @@ import keyboard
 import os
 
 # Set the directory where screenshots will be saved
-save_directory = r"D:\Desktop\cheat"
+save_directory = r"D:\Desktop\cheat\images"
 
 # Ensure the directory exists, create it if not
 os.makedirs(save_directory, exist_ok=True)
-import random
-screenshot_index = str(random.randint(1000, 9999))
-# Initialize index for naming screenshots
-screenshot_index = 1
 
 def take_screenshot():
-    global screenshot_index
     # Capture screenshot
     screenshot = pyautogui.screenshot()
 
-    # Save screenshot to specified directory with unique name
-    screenshot_name = f"ril{screenshot_index}.png"
-    screenshot_path = os.path.join(save_directory, screenshot_name)
-    screenshot.save(screenshot_path)
-
-    # Increment index for the next screenshot
-    screenshot_index += 1
+    # Save screenshot to specified directory
+    screenshot.save(os.path.join(save_directory, "screenshot.png"))
 
 # Define a function to check for key press
 def check_hotkey():
