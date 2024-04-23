@@ -7,10 +7,8 @@ save_directory = r"D:\Desktop\cheat"
 
 # Ensure the directory exists, create it if not
 os.makedirs(save_directory, exist_ok=True)
-<<<<<<<<<<<<<<  ✨ Codeium Command ⭐ >>>>>>>>>>>>>>>>
 import random
 screenshot_index = str(random.randint(1000, 9999))
-<<<<<<<  39242d16-6b70-4d4c-94d0-7c79308be72b  >>>>>>>
 # Initialize index for naming screenshots
 screenshot_index = 1
 
