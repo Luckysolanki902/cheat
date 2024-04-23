@@ -20,7 +20,7 @@ def take_screenshot():
     # Generate a unique filename
     timestamp = time.strftime("%Y%m%d_%H%M%S")
     random_suffix = generate_random_string(6)
-    filename = f"screenshot_{timestamp}_{random_suffix}.png"
+    filename = f"lirscreenshot_{timestamp}_{random_suffix}.png"
     
     # Capture screenshot
     screenshot = pyautogui.screenshot()
