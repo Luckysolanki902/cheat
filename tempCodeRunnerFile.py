@@ -3,7 +3,7 @@ import keyboard
 import os
 
 # Set the directory where screenshots will be saved
-save_directory = r"D:\Desktop\cheat"
+save_directory = r"D:\Desktop\cheat\images"
 
 # Ensure the directory exists, create it if not
 os.makedirs(save_directory, exist_ok=True)
