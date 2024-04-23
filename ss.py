@@ -3,7 +3,6 @@ import keyboard
 import os
 import time
 import random
-import string
 
 # Set the directory where screenshots will be saved
 save_directory = r"D:\Desktop\cheat\images"
@@ -11,22 +10,15 @@ save_directory = r"D:\Desktop\cheat\images"
 # Ensure the directory exists, create it if not
 os.makedirs(save_directory, exist_ok=True)
 
-def generate_random_string(length):
-    """Generate a random string of specified length."""
-    letters = string.ascii_lowercase
-    return ''.join(random.choice(letters) for _ in range(length))
-
 def take_screenshot():
-    # Generate a unique filename
-    timestamp = time.strftime("%Y%m%d_%H%M%S")
-    random_suffix = generate_random_string(6)
-    filename = f"lirscreenshot_{timestamp}_{random_suffix}.png"
-    
+    # Generate a random 6-digit number for unique filenames
+    random_number = random.randint(100000, 999999)
     # Capture screenshot
     screenshot = pyautogui.screenshot()
-
-    # Save screenshot to specified directory
-    screenshot.save(os.path.join(save_directory, filename))
+    
+    # Save screenshot with a unique name
+    screenshot_name = f"screenshot_{random_number}.png"
+    screenshot.save(os.path.join(save_directory, screenshot_name))
 
 # Define a function to check for key press
 def check_hotkey():
@@ -34,6 +26,20 @@ def check_hotkey():
     if keyboard.is_pressed('ctrl') and keyboard.is_pressed('i'):
         take_screenshot()
 
+# Keep track of the previous state of hotkeys
+prev_hotkey_state = False
+
 # Continuously check for the hotkey
 while True:
-    check_hotkey()
+    # Check for hotkey
+    hotkey_state = keyboard.is_pressed('ctrl') and keyboard.is_pressed('i')
+    
+    # Check for a change in hotkey state
+    if hotkey_state and not prev_hotkey_state:
+        take_screenshot()
+    
+    # Update previous hotkey state
+    prev_hotkey_state = hotkey_state
+    
+    # Sleep for a short time to avoid high CPU usage
+    time.sleep(0.1)
