@@ -19,7 +19,7 @@ This Python script runs in the background and detects key presses. It facilitate
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/Luckysolanki902/cheat
+    git clone https://github.com/Luckysolanki902/help-me-cheat
     ```
 
 2. **Install the required Python packages:**
