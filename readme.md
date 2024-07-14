@@ -1,6 +1,9 @@
-# Screenshot to WhatsApp with Text Extraction and AI Assistance
+# Help Me Cheat
 
-This Python script allows you to take screenshots of questions on your screen and send them via WhatsApp. It can extract text from the screenshots or use AI to process the screenshots, depending on the hotkeys pressed. The script operates in the background and does not trigger any tab change events, making it compliant with proctoring software rules.
+This Python script runs in the background and detects key presses. It facilitates the retrieval of answers or questions to your mobile device via WhatsApp:
+
+- **Answer Retrieval**: Press `Ctrl+M` to receive the correct answer along with its solution.
+- **Question Extraction**: Press `Ctrl+I` to extract the question text only.
 
 ## Features
 
@@ -16,7 +19,7 @@ This Python script allows you to take screenshots of questions on your screen an
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/Luckysolanki902/cheat
+    git clone https://github.com/Luckysolanki902/help-me-cheat
     ```
 
 2. **Install the required Python packages:**
@@ -52,7 +55,7 @@ python ./main.py
     - Press ctrl + m to get the solution to your whatsapp  
 
 
-    <div style="font-style: italic; font-weight: 100; text-align: right;margin-top: 5rem;">-Made by Lucky Solanki</div>
+*-Made by Lucky Solanki*
 
 
   
